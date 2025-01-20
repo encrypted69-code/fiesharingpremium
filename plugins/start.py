@@ -582,4 +582,55 @@ async def help(client: Client, message: Message):
             message_effect_id = 5046509860389126442 #🎉
         )
     except Exception as e:
-        return await message.reply(f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @Shidoteshika1</i></b>\n<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>")
+        return await message.reply(f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @rohit_1888</i></b>\n<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>")
+
+
+@Bot.on_message(filters.command('short') & filters.private & is_admin)
+async def shorten_link_command(client, message):
+    id = message.from_user.id
+
+    try:
+        # Prompt the user to send the link to be shortened
+        set_msg = await client.ask(
+            chat_id=id,
+            text="<b><blockquote>⏳ Sᴇɴᴅ ᴀ ʟɪɴᴋ ᴛᴏ ʙᴇ sʜᴏʀᴛᴇɴᴇᴅ</blockquote>\n\nFᴏʀ ᴇxᴀᴍᴘʟᴇ: <code>https://example.com/long_url</code></b>",
+            timeout=60
+        )
+
+        # Validate the user input for a valid URL
+        original_url = set_msg.text.strip()
+
+        if original_url.startswith("http") and "://" in original_url:
+            try:
+                # Call the get_shortlink function
+                short_link = await get_shortlink(original_url)
+
+                # Inform the user about the shortened link
+                await set_msg.reply(f"<b>🔗 Lɪɴᴋ Cᴏɴᴠᴇʀᴛᴇᴅ Sᴜᴄᴄᴇssғᴜʟʟʏ ✅</b>\n\n<blockquote>🔗 Sʜᴏʀᴛᴇɴᴇᴅ Lɪɴᴋ: <code>{short_link}</code></blockquote>")
+            except ValueError as ve:
+                # If shortener details are missing
+                await set_msg.reply(f"<b>❌ Error: {ve}</b>")
+            except Exception as e:
+                # Handle errors during the shortening process
+                await set_msg.reply(f"<b>❌ Error while shortening the link:\n<code>{e}</code></b>")
+        else:
+            # If the URL is invalid, prompt the user to try again
+            await set_msg.reply("<b>❌ Invalid URL. Please send a valid link that starts with 'http'.</b>")
+
+    except asyncio.TimeoutError:
+        # Handle timeout exceptions
+        await client.send_message(
+            id,
+            text="<b>⏳ Tɪᴍᴇᴏᴜᴛ. Yᴏᴜ ᴛᴏᴏᴋ ᴛᴏᴏ ʟᴏɴɢ ᴛᴏ ʀᴇsᴘᴏɴᴅ. Pʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.</b>",
+            disable_notification=True
+        )
+        print(f"! Timeout occurred for user ID {id} while processing '/shorten' command.")
+
+    except Exception as e:
+        # Handle any other exceptions
+        await client.send_message(
+            id,
+            text=f"<b>❌ Aɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ:\n<code>{e}</code></b>",
+            disable_notification=True
+        )
+        print(f"! Error occurred on '/short' command: {e}")
