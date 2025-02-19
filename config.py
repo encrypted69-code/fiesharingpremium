@@ -67,7 +67,7 @@ OWNER_TAG = os.environ.get("OWNER_TAG", "Purushhelp")
 UPI_ID = os.environ.get("UPI_ID", "6291541785@mbk")
 
 #UPI QR CODE IMAGE
-UPI_IMAGE_URL = os.environ.get("UPI_IMAGE_URL", "https://https://envs.sh/hXP.36.jpg")
+UPI_IMAGE_URL = os.environ.get("UPI_IMAGE_URL", "https://envs.sh/hXP.36.jpg")
 
 #SCREENSHOT URL of ADMIN for verification of payments
 SCREENSHOT_URL = os.environ.get("SCREENSHOT_URL", f"t.me/purushhelp")
