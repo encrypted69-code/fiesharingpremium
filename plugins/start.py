@@ -37,7 +37,7 @@ async def start_command(client: Client, message: Message):
     DEL_TIMER = 0
     HIDE_CAPTION = False
     CHNL_BTN = None
-    PROTECT_MODE = False
+    PROTECT_MODE = True
     last_message = None
     messages = []
 
@@ -94,7 +94,7 @@ async def start_command(client: Client, message: Message):
         elif string.startswith("premium"):
             if not is_premium:
                 return await message.reply(
-                    "Buy premium to access this content.\nTo buy, contact @rohit_1888",
+                    "Buy premium to access this content.\nTo buy, contact @purushhelp",
                     reply_markup=PREMIUM_BUTTON2
                 )
 
@@ -281,9 +281,9 @@ async def start_command(client: Client, message: Message):
                 [InlineKeyboardButton("😊 About Me", callback_data="about"),
                  InlineKeyboardButton("🔒 Close", callback_data="close")],
                 [InlineKeyboardButton('BUY PREMIUM', callback_data='buy_prem')],
-                [InlineKeyboardButton('⛩️ JAV', url='https://t.me/Javpostr'),
-                 InlineKeyboardButton('⚡️ Support', url='https://t.me/javposts')],
-                [InlineKeyboardButton('🌐 Source Code', url='https://t.me/rohit_1888')]
+                [InlineKeyboardButton('⛩️ Chat', url='https://t.me/purushchat'),
+                 InlineKeyboardButton('⚡️ Support', url='https://t.me/purushhelp')],
+                [InlineKeyboardButton('🌐 Source Code', url='https://t.me/purushhelp')]
             ]
         )
 
