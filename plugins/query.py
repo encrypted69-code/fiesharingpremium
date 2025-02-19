@@ -696,12 +696,12 @@ async def cb_handler(client: Bot, query: CallbackQuery):
 
             # Response message
                 response_text = (
-                    f"**Shortener Details**\n"
-                    f"**Site**: {shortener_url_display}\n"
-                    f"**API Token**: {shortener_api_display}\n"
-                    f"**Status**: {status}\n\n"
-                    f"**Verified Time**: {verified_time_display}\n"
-                    f"**Tutorial Video**: {tut_video_display}"
+                    f"Shortener Details\n"
+                    f"Site: {shortener_url_display}\n"
+                    f"API Token: {shortener_api_display}\n"
+                    f"Status: {status}\n\n"
+                    f"Verified Time: {verified_time_display}\n"
+                    f"Tutorial Video: {tut_video_display}"
                 )
 
             # Update the message with the fetched details
