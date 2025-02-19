@@ -8,51 +8,47 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 
-#Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7520786912:AAFlzxqfVt9h5KXb4IXkXxW36Lg9h27VO8s")
+#Bot token @Botfather, --⚠️ REQUIRED--
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7406407460:AAHvYL7lXKqh-PuHojT7SPicItACcfIajMo")
 
-#Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "9698652"))
+#Your API ID from my.telegram.org, --⚠️ REQUIRED--
+APP_ID = int(os.environ.get("APP_ID", "20718334"))
 
-#Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH", "b354710ab18b84e00b65c62ba7a9c043")
+#Your API Hash from my.telegram.org, --⚠️ REQUIRED--
+API_HASH = os.environ.get("API_HASH", "4e81464b29d79c58d0ad8a0c55ece4a5")
 
-#Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002008354608"))
+#Your db channel Id --⚠️ REQUIRED--
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002177334941"))
 
-#OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "7328629001"))
+#OWNER ID --⚠️ REQUIRED--
+OWNER_ID = int(os.environ.get("OWNER_ID", "5585016974"))
+
+#SUPPORT_GROUP: This is used for normal users for getting help if they don't understand how to use the bot --⚠ OPTIONAL--
+SUPPORT_GROUP = os.environ.get("SUPPORT_GROUP", "-1002020461301")
 
 #Port
-PORT = os.environ.get("PORT", "5289")
+PORT = os.environ.get("PORT", "8080")
 
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://rohitplayer87089:rohit870@cluster0.4wt927p.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DATABASE_NAME", "test")
-
-
-
-IS_VERIFY = os.environ.get("IS_VERIFY", "True")
-TUT_VID = os.environ.get("TUT_VID", "https://t.me/delight_link/2")
-
-
+#Database --⚠️ REQUIRED--
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://Umaid:umaid@cluster0.k2yxsvu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
+
+#Collection of pics for Bot // #Optional but atleast one pic link should be replaced if you don't want predefined links
+PICS = (os.environ.get("PICS", "https://envs.sh/W9M.jpg https://envs.sh/3PQ.jpg https://envs.sh/Chb.jpg https://envs.sh/Ckc.jpg https://envs.sh/7nm.jpg")).split() #Required
+
+#set your Custom Caption here, Keep None for Disable Custom Caption
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<blockquote expandable>{filename}</blockquote></b>")
+
+
 
 START_PIC = os.environ.get("START_PIC", "https://telegra.ph/file/ec17880d61180d3312d6a.jpg")
 FORCE_PIC = os.environ.get("FORCE_PIC", "https://telegra.ph/file/e292b12890b8b4b9dcbd1.jpg")
 
 QR_PIC = os.environ.get("QR_PIC", "https://envs.sh/B7w.png")
 
-
-
 
-
-#set your Custom Caption here, Keep None for Disable Custom Caption
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>ʙʏ @Javpostr</b>")
-
-#Collection of pics for Bot // #Optional but atleast one pic link should be replaced if you don't want predefined links
-PICS = (os.environ.get("PICS", "https://envs.sh/4Iq.jpg https://envs.sh/4IW.jpg https://envs.sh/4IB.jpg https://envs.sh/4In.jpg")).split() #Required
-
 
 #==========================(BUY PREMIUM)====================#
 
