@@ -24,7 +24,7 @@ CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002367887650"))
 OWNER_ID = int(os.environ.get("OWNER_ID", "6638314057"))
 
 #SUPPORT_GROUP: This is used for normal users for getting help if they don't understand how to use the bot --⚠ OPTIONAL--
-SUPPORT_GROUP = os.environ.get("SUPPORT_GROUP", "-1002020461301")
+SUPPORT_GROUP = os.environ.get("SUPPORT_GROUP", "-4737221280")
 
 #Port
 PORT = os.environ.get("PORT", "8080")
@@ -46,7 +46,7 @@ CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<blockquote expandable>{filen
 START_PIC = os.environ.get("START_PIC", "https://telegra.ph/file/ec17880d61180d3312d6a.jpg")
 FORCE_PIC = os.environ.get("FORCE_PIC", "https://telegra.ph/file/e292b12890b8b4b9dcbd1.jpg")
 
-QR_PIC = os.environ.get("QR_PIC", "https://envs.sh/B7w.png")
+QR_PIC = os.environ.get("QR_PIC", "https://envs.sh/hXP.36.jpg)
 
 
 
@@ -54,11 +54,11 @@ QR_PIC = os.environ.get("QR_PIC", "https://envs.sh/B7w.png")
 #==========================(BUY PREMIUM)====================#
 
 PREMIUM_BUTTON = reply_markup=InlineKeyboardMarkup(
-        [[InlineKeyboardButton("Remove Ads In One Click", callback_data="buy_prem")]]
+        [[InlineKeyboardButton("watch all videos", callback_data="buy_prem")]]
 )
 
 PREMIUM_BUTTON2 = reply_markup=InlineKeyboardMarkup(
-        [[InlineKeyboardButton("Remove Ads In One Click", callback_data="buy_prem")]]
+        [[InlineKeyboardButton("watch all videos", callback_data="buy_prem")]]
 ) 
 
 OWNER_TAG = os.environ.get("OWNER_TAG", "Purushhelp")
@@ -67,7 +67,7 @@ OWNER_TAG = os.environ.get("OWNER_TAG", "Purushhelp")
 UPI_ID = os.environ.get("UPI_ID", "6291541785@mbk")
 
 #UPI QR CODE IMAGE
-UPI_IMAGE_URL = os.environ.get("UPI_IMAGE_URL", "https://t.me/paymentbot6/2")
+UPI_IMAGE_URL = os.environ.get("UPI_IMAGE_URL", "https://https://envs.sh/hXP.36.jpg")
 
 #SCREENSHOT URL of ADMIN for verification of payments
 SCREENSHOT_URL = os.environ.get("SCREENSHOT_URL", f"t.me/purushhelp")
