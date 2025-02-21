@@ -46,7 +46,7 @@ CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<blockquote expandable>{filen
 START_PIC = os.environ.get("START_PIC", "https://telegra.ph/file/ec17880d61180d3312d6a.jpg")
 FORCE_PIC = os.environ.get("FORCE_PIC", "https://telegra.ph/file/e292b12890b8b4b9dcbd1.jpg")
 
-QR_PIC = os.environ.get("QR_PIC", "https://envs.sh/hXP.36.jpg")
+QR_PIC = os.environ.get("QR_PIC", "https://envs.sh/28T.45.jpeg")
 
 
 
@@ -63,7 +63,7 @@ PREMIUM_BUTTON2 = reply_markup=InlineKeyboardMarkup(
 OWNER_TAG = os.environ.get("OWNER_TAG", "Purushhelp")
 
 #UPI ID
-UPI_ID = os.environ.get("UPI_ID", "6291541785@mbk")
+UPI_ID = os.environ.get("UPI_ID", "BHARATPE.8U0M0T7N4I91822@fbpe")
 
 #UPI QR CODE IMAGE
 UPI_IMAGE_URL = os.environ.get("UPI_IMAGE_URL", "https://envs.sh/hXP.36.jpg")
